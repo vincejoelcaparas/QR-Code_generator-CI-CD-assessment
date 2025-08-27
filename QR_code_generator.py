@@ -1,7 +1,7 @@
 import qrcode
 
 # Enter url of any website here.
-input_URL = "https://www.google.com/"
+input_URL = "https://jlabs.team/"
 
 qr = qrcode.QRCode(
     version=1,
@@ -18,3 +18,4 @@ img = qr.make_image(fill_color="red", back_color="white")
 img.save("url_qrcode.png")
 
 print(qr.data_list)
+

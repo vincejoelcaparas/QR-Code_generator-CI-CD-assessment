@@ -29,7 +29,7 @@ jobs:
       - name: Run test
         run: |
           echo "run test"
-          python QR_code_generator.py "https://example.com"
+          python QR_code_generator.py "https://jlabs.team/"
 
       - name: Mock Deployment
         run: |

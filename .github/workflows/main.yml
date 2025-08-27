@@ -28,9 +28,14 @@ jobs:
 
       - name: Run test
         run: |
-          echo "Running smoke test..."
+          echo "run test"
           python QR_code_generator.py "https://example.com"
-          echo "Smoke test completed"
+
+      - name: Mock Deployment
+        run: |
+          echo "Deploying..."
+          
+          
         
         
     

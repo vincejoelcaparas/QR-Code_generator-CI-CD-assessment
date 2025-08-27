@@ -1,0 +1,37 @@
+name: CICD Assessment
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          node-version: '3.13'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install
+          pip install qrcode
+
+      - name: Run test
+        run: |
+          echo "Running smoke test..."
+          python QR_code_generator.py "https://example.com"
+          echo "Smoke test completed"
+        
+        
+    
+
+  

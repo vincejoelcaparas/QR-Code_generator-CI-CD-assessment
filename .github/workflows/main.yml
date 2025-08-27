@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install
-          pip install qrcode
+          python -m pip install qrcode
 
       - name: Run test
         run: |
